@@ -7,7 +7,7 @@ def import_library():
     library = []
     library = extract.readlines()
 
-    print(library[76])
+    print(library)
 
 def random_words_library():
     pass
