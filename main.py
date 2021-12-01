@@ -1,3 +1,4 @@
-import menu
 
-menu.start_the_game()
+import words_library
+
+words_library.import_library()
