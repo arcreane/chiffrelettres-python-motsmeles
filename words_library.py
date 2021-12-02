@@ -16,7 +16,7 @@ def random_words_library(extracted_list):
 
     word_list = []
     i = 0
-    while i < 4:#difficulté select
+    while i < 4:#difficulty select
 
         i += 1
         word = random.choice(extracted_list)
@@ -24,10 +24,9 @@ def random_words_library(extracted_list):
 
     #Cut words in letters
 
-    word_list = list(map(lambda st: str.replace(st, "\n", ','), word_list))
+    word_list = list(map(lambda st: str.replace(st, "\n", '/'), word_list))
 
     print(word_list)
-
 
 
 #if len(world list) > nombre cases
