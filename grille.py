@@ -24,10 +24,10 @@ def grille():
 
 
     nb_col=7
-    for i in range(0, nb_col + 1):
-            grid.append(pygame.rect.Rect(i * width2 / nb_col, 0, 7, heigth))
+    for i in range(1, nb_col + 1):
+            grid.append(pygame.rect.Rect(i * width2 / nb_col, 0, 3, heigth))
             col.append(i * width2 / nb_col)
-            grid.append(pygame.rect.Rect(0, i * heigth / nb_col, width2, 7))
+            grid.append(pygame.rect.Rect(0, i * heigth / nb_col, width2, 3))
             lin.append(i * heigth / nb_col)
 
     for i in range(nb_col):
