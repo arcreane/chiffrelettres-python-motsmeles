@@ -1,8 +1,7 @@
 import pygame
 import pygame_menu
 
-pygame.init()
-surface = pygame.display.set_mode((800, 700))
+import grille
 
 
 def set_difficulty(value, difficulty):
@@ -13,13 +12,15 @@ def set_difficulty(value, difficulty):
 def start_the_game():
     pass
 
-def selection_menu():
-    menu = pygame_menu.Menu('Welcome to the Word Jumble', 600, 500,
-                            theme=pygame_menu.themes.THEME_DARK)
+def start_menu(screen, fond_start):
 
-    # menu.add.text_input('Name :', default='John Doe')
-    menu.add.selector('Difficulty :', [('Easy', 1), ('Medium', 2), ('Hard', 3)], onchange=set_difficulty)
-    menu.add.button('Play', start_the_game)  # àfaire!
-    menu.add.button('Quit', pygame_menu.events.EXIT)  # fonctionne!
 
-    menu.mainloop(surface)
+    menu = pygame_menu.Menu('Welcome to mots croises', 500, 500,theme=pygame_menu.themes.THEME_BLUE)
+    menu.add.dropselect('Difficulty :', [('Easy', 1), ('Medium', 2), ('Hard', 3)], onchange=set_difficulty)
+    menu.add.button('Play')
+    menu.add.button('Quit', pygame_menu.events.EXIT)
+    menu.mainloop(screen)
+
+
+
+
