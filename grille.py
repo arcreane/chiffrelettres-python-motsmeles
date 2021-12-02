@@ -8,10 +8,11 @@ width2=width//3*2
 surface=width2*heigth
 gris=(60,60,60)
 black=(0,0,0)
-red=(255,0,0)
+white=(255,255,255)
 grid=[]
 col=[]
 lin=[]
+easy = 7
 
 def grille():
     screen = pygame.display.set_mode((width, heigth))
@@ -25,7 +26,7 @@ def grille():
 
 
 
-    nb_col=7
+    nb_col=(7)
     for i in range(1, nb_col + 1):
             grid.append(pygame.rect.Rect(i * width2 / nb_col, 0, 3, heigth))
             col.append(i * width2 / nb_col)
@@ -44,8 +45,8 @@ def grille():
     while running:
         pygame.display.flip()
         for trace in range(nb_col):
-            pygame.draw.rect(screen, red, grid[2 * trace])
-            pygame.draw.rect(screen, red, grid[2 * trace + 1])
+            pygame.draw.rect(screen, white, grid[2 * trace])
+            pygame.draw.rect(screen, white, grid[2 * trace + 1])
 
 
         for event in pygame.event.get():
