@@ -6,7 +6,7 @@ width=800
 heigth= 800
 width2=width//3*2
 surface=width2*heigth
-white=(255,255,250)
+gris=(60,60,60)
 black=(0,0,0)
 red=(255,0,0)
 grid=[]
@@ -18,6 +18,8 @@ def grille():
     screen.fill(black)
     pygame.display.set_caption("Mot Mélee")
     pygame.init()
+    carre=(0,0,width2,heigth)
+    pygame.draw.rect(screen, gris,carre)
 
 
 
