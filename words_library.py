@@ -15,6 +15,8 @@ def import_library():
 
 def difficulty_list(extracted_list):
 
+    #divide list in 3 lists (easy, medium, hard)
+
     easy_list =[]
     medium_list = []
 
