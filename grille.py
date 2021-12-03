@@ -73,3 +73,4 @@ def grille(screen, font):
             font.render_to(screen, ((coords[0] + letter_postion*inc_h)* col_width + 6,
                                     (coords[1] +1 + letter_postion*inc_vert)* lin_height- 3), letter, pygame.Color('red'))
             letter_postion +=1
+
