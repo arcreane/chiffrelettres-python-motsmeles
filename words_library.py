@@ -35,7 +35,7 @@ def difficulty_list(extracted_list):
 
 def random_words_library(difficulty_list):
 
-    #give a random list from easy, medium or hard list
+    # give a random list from easy, medium or hard list
 
     random_word_list = []
     i = 0
