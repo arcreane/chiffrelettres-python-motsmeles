@@ -3,21 +3,21 @@ import random
 
 def import_library():
 
-    #Get liste_francais.txt and pass it througt a Python list named library
+    # Get liste_francais.txt and pass it throughout a Python list named library
 
     extract = open("liste_francais.txt")
     library = extract.readlines()
 
     library = list(map(lambda st: str.replace(st, "?", "e"), library))
 
-    #random_words_library(library)
     difficulty_list(library)
+
 
 def difficulty_list(extracted_list):
 
-    #divide list in 3 lists (easy, medium, hard)
+    # divide list in 3 lists (easy, medium, hard)
 
-    easy_list =[]
+    easy_list = []
     medium_list = []
 
     for word in extracted_list:
@@ -30,25 +30,26 @@ def difficulty_list(extracted_list):
 
     hard_list = extracted_list
 
-    random_words_library(easy_list)
+    random_words_library(hard_list)
+
 
 def random_words_library(difficulty_list):
 
+    #give a random list from easy, medium or hard list
+
     random_word_list = []
     i = 0
-    while i < 4:#difficulté select
+    while i < 4:
 
         i += 1
         word = random.choice(difficulty_list)
 
-        random_word_list.extend(word)
+        random_word_list.extend([word])
 
-    #Cut words in letters and delete \n
+    #delete \n
 
     random_word_list = list(map(lambda st: str.replace(st, "\n", ''), random_word_list))
 
-    print(random_word_list)
+    random_words = random_word_list
 
-
-
-#if len(world list) > nombre cases
+    return random_words

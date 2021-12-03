@@ -9,19 +9,23 @@ import menu
 import timer
 import words_library
 
+# Game loop definition
+
 def run():
+
     black = (0,0,0)
 
     pygame.init()
 
     screen = pygame.display.set_mode((900, 603))
-
+    #wallpaper parameters
     fond_start = pygame.image.load("motscroises.jpeg").convert()
     fond_start = pygame.transform.scale(fond_start, (900, 603))
     screen.fill(black)
 
     running=True
     time = pygame.time.Clock()
+
 
     font = pygame.freetype.SysFont(None, 42)
     font.origin = True
@@ -34,7 +38,6 @@ def run():
         timer.timer(screen)
 
         grille.grille(screen, font)
-        #words_library.import_library()
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:

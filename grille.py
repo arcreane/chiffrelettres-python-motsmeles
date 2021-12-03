@@ -1,3 +1,5 @@
+import random
+
 import pygame
 import words_library
 
@@ -23,7 +25,9 @@ diagonal = 2
 #position 2 ordre (normal ou reverse)
 #position 3 coord
 
-mots = [("coding", horizontal,False, (5,4)), ("factory", vertical, True, (12,3)), ("arcreane", diagonal, True, (0,6))]
+mots = [('lapin', horizontal, False, (5, 4)), ("castor", vertical, True, (12,3)), ("rhinoceros", diagonal, True, (0,5))]
+
+print (words_library.import_library())
 
 def grille(screen, font):
     grid = []
