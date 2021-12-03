@@ -16,7 +16,7 @@ pygame.init()
 screen = pygame.display.set_mode((900, 603))
 
 fond_start = pygame.image.load("motscroises.jpeg").convert()
-fond_start = pygame.transform.scale(fond_start, (700, 700))
+fond_start = pygame.transform.scale(fond_start, (900, 603))
 screen.fill(black)
 
 running=True
