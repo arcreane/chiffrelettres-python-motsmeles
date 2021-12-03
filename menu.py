@@ -5,13 +5,20 @@ import grille
 import main
 
 
-def set_difficulty(value, difficulty):
-    # Do the job here !
+
+
+def set_difficulty(screen,arg1):
+
+
+
     pass
 
 
 def start_the_game(screen, font, selection_menu):
+    #stop menu to can play
     selection_menu.disable()
+
+
 
 def start_menu(screen, font):
 
